@@ -7,15 +7,16 @@ export default defineConfig({
   server: {
     open: true
   },
-  base: '/Syntecxhub_Image_Gallery_App/', // Make sure this matches your repo name
+  base: '/Syntecxhub_Image_Gallery_App/', // This MUST match your repo name
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    emptyOutDir: true,
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[hash][extname]',
-        chunkFileNames: 'assets/[name].[hash].js',
         entryFileNames: 'assets/[name].[hash].js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: 'assets/[name].[hash].[ext]'
       }
     }
   }
