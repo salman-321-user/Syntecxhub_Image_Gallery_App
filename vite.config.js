@@ -6,11 +6,5 @@ export default defineConfig({
   server: {
     port: 5173,
     open: true
-  },
-  base: '/Syntecxhub_Image_Gallery_App/', // Must match repo name exactly
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    emptyOutDir: true,
   }
 })
